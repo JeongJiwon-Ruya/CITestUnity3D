@@ -20,5 +20,5 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          projectPath: "CITestUnity3D/CITestUnity/"
+          projectPath: ./CITestUnity/
           githubToken: ${{ secrets.GITHUB_TOKEN }}
