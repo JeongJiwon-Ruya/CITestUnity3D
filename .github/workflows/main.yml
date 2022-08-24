@@ -1,22 +1,13 @@
 name: Test project
 
-on: [push, pull_request]
+on: push
 
 jobs:
   testAllModes:
-    name: Test in ${{ matrix.testMode }}
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        projectPath:
-          - CITestUnity
-        testMode:
-          - playmode
-          - editmode
+
     steps:
       - uses: game-ci/unity-test-runner@v2
-        id: tests
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
