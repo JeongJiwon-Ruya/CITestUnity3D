@@ -20,5 +20,5 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          projectPath: ${{ matrix.projectPath }}
+          projectPath: ./CITestUnity/
           githubToken: ${{ secrets.GITHUB_TOKEN }}
